@@ -41,7 +41,7 @@ gulp.task('vendor', function () {
 gulp.task('browserify-vendor', function () {
   return browserify()
     .require(dependencies)
-    .bandle()
+    .bundle()
     .pipe(source('vendor.bundle.js'))
     .pipe(gulpif(production, streamify(uglify({
       mangle: false
